@@ -23,7 +23,7 @@ class Question(models.Model):
          """Return a string representation of the model."""
          return self.question
 
-class Options(models.Model):
+class Option(models.Model):
     """The various options given per quesitons"""
     option_id = models.BigAutoField(primary_key=True) 
     option = models.CharField(max_length=150)
@@ -42,7 +42,7 @@ class Result(models.Model):
          """Return a string representation of the model."""
          return self.result_id
 
-class Admins(models.Model):
+class Admin(models.Model):
     """The admins who create the survey"""
     admin_id = models.BigAutoField(primary_key=True)
     username = models.CharField(max_length=50)
