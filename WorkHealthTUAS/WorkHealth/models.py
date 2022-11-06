@@ -5,7 +5,7 @@ from django.db import models
 class Survey(models.Model):
     """A weekly survey for TUAS staff"""
     survey_id = models.BigAutoField(primary_key=True)       #auto matically creats an id for a survey, it is the primary key
-    number_questions = models.TextChoices("one","two","three")      #creates a select box that allows admin to choose an option
+    number_questions = models.TextChoices("one","two")      #creates a select box that allows admin to choose an option
     number_answers = models.IntegerField()      #potentially change to 'answer_type' and allows text answers
     upload_date = models.DateTimeField(auto_now_add=True)       #not too sure because the date it was created might not be the same as the date it will be uploaded
     #questions = models.ForeignKey(Question, on_delete=models.SET_NULL)     #creating an association between class survey and class Question, idk how it works if there are multiple questions
