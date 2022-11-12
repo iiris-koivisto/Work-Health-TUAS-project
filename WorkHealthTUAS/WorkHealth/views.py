@@ -9,7 +9,8 @@ def index(request):
     return render(request, 'WorkHealth/index.html')
 
 def surveys(request):
-    #Show that week's survey
-    surveys = Survey.objects
-    context = {'surveys':surveys}
+    #Show that week's survey, Not sure if this works
+    surveys = Survey.objects.order_by('date_added')
+    survey = surveys[0]
+    context = {'surveys':survey}
     return render(request, 'WorkHealth/index.html', context)
