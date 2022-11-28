@@ -11,6 +11,13 @@ def index(request):
 
     return render(request, 'WorkHealth/index.html', context)
 
+def index2(request):
+    question = Question.objects
+    option = Option.objects.all()
+    context = {"questions": question, "options": option}
+
+    return render(request, 'WorkHealth/index2.html', context)
+
 # class survey(DetailView):
 #     model = Survey
 #     def get_context_data(self, **kwargs):
