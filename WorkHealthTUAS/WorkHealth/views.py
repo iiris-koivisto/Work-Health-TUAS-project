@@ -18,6 +18,9 @@ def index2(request):
 
     return render(request, 'WorkHealth/index2.html', context)
 
+def thankyou(request):
+    return render(request, 'WorkHealth/thankyou.html')
+
 # class survey(DetailView):
 #     model = Survey
 #     def get_context_data(self, **kwargs):
