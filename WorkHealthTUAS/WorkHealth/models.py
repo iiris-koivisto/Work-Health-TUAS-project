@@ -9,9 +9,9 @@ class Survey(models.Model):
     is_active = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)       #not too sure because the date it was created might not be the same as the date it will be uploaded
    
-    def __str__(self):
-         """Return a string representation of the model."""
-         return self.survey_id
+    # def __str__(self):
+    #      """Return a string representation of the model."""
+    #      return self.survey_id
 
 
 class Question(models.Model):
@@ -22,7 +22,7 @@ class Question(models.Model):
 
     def __str__(self):
          """Return a string representation of the model."""
-         return self.question
+         return self.question_text
 
 class Option(models.Model):
     """The various options given per quesitons"""
@@ -32,7 +32,7 @@ class Option(models.Model):
 
     def __str__(self):
          """Return a string representation of the model."""
-         return self.option
+         return self.option_text
 
 
 class Result(models.Model):
@@ -70,3 +70,7 @@ class UserAnswer(models.Model):
     survey_id = models.ForeignKey(Survey, on_delete=models.CASCADE)
     option = models.ForeignKey(Option, on_delete=models.CASCADE)
     result = models.ForeignKey(Result, on_delete=models.CASCADE)
+    date_taken = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.staff, self.survey_id, self.date_taken
