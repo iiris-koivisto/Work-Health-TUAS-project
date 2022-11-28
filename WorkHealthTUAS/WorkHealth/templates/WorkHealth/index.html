@@ -13,7 +13,7 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>{{ question.question_text }}</h2>
+                        <h2>How many hours do you sleep at night?</h2>
                     </div>
                 </div>
 
@@ -25,22 +25,26 @@
                             {% csrf_token %}
                             <div class="form-group">
                                 <div class="radio">
-                                    <label>
-                                        <input type="radio" name="poll" value="option1" required>
-                                        {{ survey.option }}
-                                    </label> &nbsp;
-                                    <label>
-                                        <input type="radio" name="poll" value="option2">
-                                        {{ survey.option }}
-                                    </label> &nbsp;
-                                    <label>
-                                        <input type="radio" name="poll" value="option3">
-                                        {{ survey.option }}
-                                    </label> &nbsp;
-                                    <label>
-                                        <input type="radio" name="poll" value="option3">
-                                        {{ survey.option }}
-                                    </label> &nbsp;
+                                    
+                                    <label for="5h">
+                                        <input type="radio" name="sleep" id="5h" value="5h" required>
+                                        5 hours
+                                    </label><br>
+                                    
+                                    <label for="6h">
+                                        <input type="radio" name="sleep" id="6h" value="6h">
+                                        6 hours
+                                    </label><br>
+                                    
+                                    <label for="7h">
+                                        <input type="radio" name="sleep" id="7h" value="7h">
+                                        7 hours
+                                    </label><br>
+
+                                    <label for="8h">
+                                        <input type="radio" name="sleep" id="8h" value="8h">
+                                        8 hours
+                                    </label><br>
                                 </div>
                             </div>
                             
@@ -58,21 +62,3 @@
     </div>
 </div>
 {% endblock %}
-
-<!--
-
-{% block content %}
-
-    <h3>Welcome to the Work Health survey for TUAS employees</h3>
-
-    <ul>
-        {% for question in questions %}
-            <li>{{ question }}</li>
-
-        {% empty %}
-            <li>No survey available at the moment</li>
-        {% endfor %}
-
-    </ul> 
-
-{% endblock content %} -->
