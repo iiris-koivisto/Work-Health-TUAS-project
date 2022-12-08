@@ -22,7 +22,7 @@ def thankyou(request):
     return render(request, 'WorkHealth/thankyou.html')
 
 def piechart(request):
-    return render(request, 'WorkHealth/thankyou.html')
+    return render(request, 'WorkHealth/week40.html')
 
 # class survey(DetailView):
 #     model = Survey
