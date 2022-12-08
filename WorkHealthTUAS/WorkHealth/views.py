@@ -19,10 +19,10 @@ def index2(request):
     return render(request, 'WorkHealth/index2.html', context)
 
 def thankyou(request):
-    question = Question.objects
-    option = Option.objects.all()
-    context = {"questions": question, "options": option}
-    return render(request, 'WorkHealth/thankyou.html', context)
+    return render(request, 'WorkHealth/thankyou.html')
+
+def piechart(request):
+    return render(request, 'WorkHealth/thankyou.html')
 
 # class survey(DetailView):
 #     model = Survey

@@ -7,23 +7,17 @@
     <div class="col-lg-8 col-lg-offset-2">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Survey Result</h3>
-            </div>
-
-            <div class="panel-body">
-                <h3>{{ survey.question }}</h3>
+                <h1 class="panel-title"><strong>Survey Results</strong></h1>
             </div>
 
             <ul class="list-group">
-                <li class="list-group-item">{{ survey.option }} &mdash; <strong>{{ survey.option_one_count }}</strong></li>
-                <li class="list-group-item">{{ survey.option }} &mdash; <strong>{{ survey.option_two_count }}</strong></li>
-                <li class="list-group-item">{{ survey.option }} &mdash; <strong>{{ survey.option_three_count }}</strong></li>
-                <li class="list-group-item">{{ survey.option }} &mdash; <strong>{{ survey.option_three_count }}</strong></li>
+                <li class="list-group-item"><a href="{% url 'WorkHealth:week40'%}">Week 40</a></li>
+                <li class="list-group-item">Week 41</li>
+                <li class="list-group-item">Week 42</li>
+                <li class="list-group-item">Week 43</li>
+                <li class="list-group-item">Week 44</li>
+                <li class="list-group-item">Week 45</li>
             </ul>
-
-            <div class="panel-footer">
-                Total &mdash; <strong>{{ total }}</strong>
-            </div>
 
         </div>
     </div>
