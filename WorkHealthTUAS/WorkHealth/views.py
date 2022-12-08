@@ -19,7 +19,10 @@ def index2(request):
     return render(request, 'WorkHealth/index2.html', context)
 
 def thankyou(request):
-    return render(request, 'WorkHealth/thankyou.html')
+    question = Question.objects
+    option = Option.objects.all()
+    context = {"questions": question, "options": option}
+    return render(request, 'WorkHealth/thankyou.html', context)
 
 # class survey(DetailView):
 #     model = Survey
